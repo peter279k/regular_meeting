@@ -8,6 +8,8 @@ regular meeting.
 
 3	測試呼叫PhoneGap JS APIs 的時間,與Android native API 做個比較
 
+ex:	讀取100個通訊錄做比較.取得目前個人所在經緯度位置.
+
 4	chart圖表,曲線圖可更換點的圖示(可能換一套繪圖library)
 
 5	下禮拜不meeting.
