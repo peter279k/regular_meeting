@@ -17,15 +17,22 @@ ex:	讀取100個通訊錄做比較.取得目前個人所在經緯度位置.
 ## 2015/8/19
 ####Article
 1 Performance measurement: native vs PhoneGap
+
 2 Identify irregular cases from tested items
+
 3 Static page only on local server
+
 4 Mobile web performance
+
 5 Mobile multimedia support: audio and video capture
+
 6 HTML5 gaming performance on mobiles device
+
 
 ## 2015/8/14
 ####References
-1 JavaScript performance on mobile environment:
-2 http://sealedabstract.com/rants/why-mobile-web-apps-are-slow/
-3 Access local services using domains like xxx.local (mdns)
-4 Survey mdns, and android’s network service discovery: see http://developer.android.com/training/connect-devices-wirelessly/nsd.html
+1 JavaScript performance on mobile environment: http://sealedabstract.com/rants/why-mobile-web-apps-are-slow/
+
+2 Access local services using domains like xxx.local (mdns)
+
+3 Survey mdns, and android’s network service discovery: see http://developer.android.com/training/connect-devices-wirelessly/nsd.html
