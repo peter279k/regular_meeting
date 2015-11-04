@@ -74,7 +74,7 @@ public class NsdActivity extends Activity {
         
         mNsdManager = (NsdManager) getSystemService(Context.NSD_SERVICE);
         //nsd service running at port number 9000 
- 
+        registerService(9000);
         clientIPs = new ArrayList<String>();
         socketServerThread = new SocketServerThread();
         socketServerThread.start();
@@ -85,11 +85,11 @@ public class NsdActivity extends Activity {
         serviceInfo.setServiceName(SERVICE_NAME);
         serviceInfo.setServiceType(SERVICE_TYPE);
         serviceInfo.setPort(port);
- 
+        
         mNsdManager.registerService(serviceInfo,NsdManager.PROTOCOL_DNS_SD,mRegistrationListener);
     }
-    
-    RegistrationListener mRegistrationListener = new NsdManager.RegistrationListener() {
+
+	RegistrationListener mRegistrationListener = new NsdManager.RegistrationListener() {
     	 
         @Override
         public void onServiceRegistered(NsdServiceInfo NsdServiceInfo) {
@@ -143,19 +143,48 @@ public class NsdActivity extends Activity {
                     dataOutputStream = new DataOutputStream(
                         socket.getOutputStream());
  
-                    String messageFromClient = null, messageToClient, request;
- 
+                    String messageFromClient = "", messageToClient, request;
+                    
+                    ArrayList<String> strList = new ArrayList<String>();
+                    
                     //If no message sent from client, this code will block the Thread
                     BufferedReader in = new BufferedReader(new InputStreamReader(dataInputStream));
-                    while(messageFromClient == null || messageFromClient.equals("")) {
+                    BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(dataOutputStream));
+                    int count_space = 0;
+                    while(true) {
                     	messageFromClient = in.readLine().toString();
+                    	if(messageFromClient.equals(""))
+                    		count_space += 1;
+                    	if(count_space == 2)
+                    		break;
+                    	strList.add(messageFromClient);
+                    	
                     }
+                    
                     final JSONObject jsondata;
-                    Log.d("message-from-client", messageFromClient);
-                    dataOutputStream.write("Hello World!".trim().getBytes());
-                    dataOutputStream.flush();
-                    showToast(messageFromClient);
-                    showMessage(messageFromClient);
+                    Log.d("message-from-client", strList.toString());
+                    if(strList.size() == 1 || strList.get(1).trim().equals("") 
+                    		|| strList.size() == 0 || !strList.get(0).equals("GET / HTTP/1.1")) {
+                    	writer.write("HTTP/1.1 400 Bad Request\n");
+                    	writer.newLine();
+                    }
+                    else {
+                    	writer.write("HTTP/1.1 200 ok");
+                    	writer.newLine();
+                    	writer.write("Content-Type: text/plain");
+                    	writer.newLine();
+                    	writer.write("X-Powered-By: Server Socket");
+                    	writer.newLine();
+                    	writer.write("Content-Length: " + "Hello World!".getBytes().length);
+                    	writer.newLine();
+                    	writer.newLine();
+                    	writer.write("Hello World!".trim());
+                    	writer.newLine();
+                    }
+                    
+                    writer.flush();
+                    showToast(strList.toString());
+                    showMessage(strList.toString());
                     /*
                     try {
                         jsondata = new JSONObject(messageFromClient);
@@ -252,9 +281,10 @@ public class NsdActivity extends Activity {
 	protected void onResume() {
 		// TODO Auto-generated method stub
 		super.onResume();
+		/*
 		if (mNsdManager != null) {
             registerService(9000);
-        }
+        }*/
 	}
 	@Override
     public boolean onCreateOptionsMenu(Menu menu) {
