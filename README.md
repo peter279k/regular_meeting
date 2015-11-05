@@ -226,3 +226,7 @@ http://www.obsessivelyandroid.com/?p=145 (nsd server)
 
 4 mobile web performance: javascript benchmark
 
+## 2015/11/06
+1 選用一個前端Framework,與andoird native ui 列出共同元件列表
+
+2 把(nsd server + socket server)可以使用瀏覽器開啟。
