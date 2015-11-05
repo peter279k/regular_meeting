@@ -47,9 +47,13 @@ ex:	讀取100個通訊錄做比較.取得目前個人所在經緯度位置.
 
 
 ## 2015/08/19
-1 <font color="#4590a3">Performance measurement: native vs PhoneGap</font>
+```bash
+1 Performance measurement: native vs PhoneGap
+```
 
-2 <font color="green">Identify irregular cases from tested items</font>
+```bash
+2 irregular cases from tested items
+```
 
 4 Static page only on local server
 
@@ -59,29 +63,43 @@ ex:	讀取100個通訊錄做比較.取得目前個人所在經緯度位置.
 ## 2015/08/26
 1 Preview screen: Intent or native API
 
-2 <font color="purple">AJAX URL access control: how to do it? Why and How?</font>
+```bash
+2 AJAX URL access control: how to do it? Why and How?
+```
 
-3 <font color="orange">Modified WebView in PhoneGap?</font>
+```bash
+3 Modified WebView in PhoneGap?
+```
 
 4 mdns
 
 ## 2015/09/06
-1 <font color="red">Performance measurement: native vs PhoneGap</font>
+```bash
+1 Performance measurement: native vs PhoneGap
+```
 
 兩者執行時間其實沒有差很多，因為PhoneGap使用的仍是透過JS去呼叫原生對應的class 或是jar
 
+```bash
+2 Identify irregular cases from tested items
+```
 
-2 <font color="green">Identify irregular cases from tested items</font>
 有兩個case比較有問題，一個是PhoneGap響鈴(navigatror.notification.beep(1))，與原生相較之下，原生快很多，反而PhoneGap要花上約一秒。
+
 另一個則是讀取手機上的通訊錄，Native上讀取速度較慢，要花上一秒，而PhoneGap則花0.04秒，不過這兩個案例並沒有在開發上產生影響。
 
+```bash
+3 Modified WebView in PhoneGap?
+```
 
-3 <font color="orange">Modified WebView in PhoneGap?</font>
 PhoneGap基本上是包WebView，隨著版本演進和Android 系統有關，因此WebView基本上與Android native WebView沒有太大差別，不一樣的是，PhoneGap裡的WebView版本是固定的，不可隨意更改，若要更改，或是有更好的開發則須升級PhoneGap版本。
 
+```bash
+4 AJAX URL access control: how to do it? Why and How?
+```
 
-4 <font color="purple">AJAX URL access control: how to do it? Why and How?</font>
 PhoneGap機制就是藉著WebView裡的JavaScript Bridge技術，與原生的API作互動，因此這個動作存在著風險問題，若沒有做好input validation，容易受到XSS(cross site scripting)，PhoneGap有鑑於此，在專案建立好之後，需要去設定config.xml，設定允許存取的外部網域，使用的是whitelist 機制，開發時就需要做外部存取網域管理，防止XSS攻擊。
+
 reference : http://docs.phonegap.com/en/4.0.0/guide_appdev_whitelist_index.md.html
 
 ## 2015/09/15:(mDNS)
@@ -141,7 +159,7 @@ SERVICE_TYPE格式 : _[protocol]._[transportlayer].
 
 the IANA list of service names and port numbers
 
-## 2015/10/05 : embedded http server (X) prevent using cordova to implement app<font color="red">(deprecated)</font>
+## 2015/10/05 : embedded http server (X) prevent using cordova to implement app```bash(deprecated)```
 1 https://github.com/floatinghotpot/cordova-httpd
 
 2 這個可以實現跟老師說的Apache HTTP server 一樣的功能嗎?
