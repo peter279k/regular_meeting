@@ -147,9 +147,9 @@ Benchmark.js: https://github.com/bestiejs/benchmark.js
 (詳細會把手機與桌上web browse跑完三個常用的benchmark結果r整理成投影片)
 
 ## 2015/09/30 : Service type has only limited choices: ._http._tcphost, with port numbers
-1 在這篇http://developer.android.com/training/connect-devices-wirelessly/nsd.html文章中有
+1 在這篇http://developer.android.com/training/connect-devices-wirelessly/nsd.html
 
-特別提到關於service type，能夠使用的要去The International Assigned Numbers Authority(國際網路協定註冊中心)去看可以使用的清單列表。只要上面有的，都可以使用。
+文章中有特別提到關於service type，能夠使用的要去The International Assigned Numbers Authority(國際網路協定註冊中心)去看可以使用的清單列表。只要上面有的，都可以使用。
 
 http://www.obsessivelyandroid.com/?p=145 文章中提到
 
