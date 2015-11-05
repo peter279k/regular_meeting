@@ -47,7 +47,7 @@ ex:	讀取100個通訊錄做比較.取得目前個人所在經緯度位置.
 
 
 ## 2015/08/19
-1 <font color="red">Performance measurement: native vs PhoneGap</font>
+1 <font color="#4590a3">Performance measurement: native vs PhoneGap</font>
 
 2 <font color="green">Identify irregular cases from tested items</font>
 
