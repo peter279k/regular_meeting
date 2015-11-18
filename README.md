@@ -230,3 +230,7 @@ http://www.obsessivelyandroid.com/?p=145 (nsd server)
 1 選用一個前端Framework,與andoird native ui 列出共同元件列表
 
 2 把(nsd server + socket server)可以使用瀏覽器開啟。
+
+## 2015/11/18
+1 nsd server + socket server 可以使用瀏覽器打開。(更新至投影片)
+2 前端jQuery Mobile元件與原生Android Widget 元件(列表整裡成表格)
