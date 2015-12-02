@@ -234,3 +234,26 @@ http://www.obsessivelyandroid.com/?p=145 (nsd server)
 ## 2015/11/18
 1 nsd server + socket server 可以使用瀏覽器打開。(更新至投影片)
 2 前端jQuery Mobile元件與原生Android Widget 元件(列表整裡成表格)
+
+## 2015/11/19
+part 1
+
+server * 3 (cordova NSD server, native NSD server, bonjour server (jmdns/avahi) )
+
+client * 4 (cordova NSD client, native NSD client, bonjour client (jmdns/avahi), generic client)
+
+queried name * 2: service name, service name + “.local”
+
+WebView capabilities: is it the same powerful as chrome or other browser
+
+javascript, html5, performance
+
+part 2
+
+UI latency measurement frameworks
+
+native vs jQuery mobile
+
+screen shots
+
+components, touch event
