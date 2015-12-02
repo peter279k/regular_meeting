@@ -257,3 +257,16 @@ native vs jQuery mobile
 screen shots
 
 components, touch event
+
+## 2015/12/02
+part1
+
+整理WebView支援能力的ppt，HTML5 的程度
+
+part2
+
+有Bonjour Browser for Windows這類工具
+
+Bonjour Server for Windows?
+
+新增Bonjour browser Demo
