@@ -270,3 +270,10 @@ part2
 Bonjour Server for Windows?
 
 新增Bonjour browser Demo
+
+## 2015/12/02
+NsdServer APP 跑 backgroung service，隨手機開機啟動
+
+NsdClient APP 查詢服務，port,address,service name,service type
+
+皆在同一支手機上 run ( 這兩支 APP)
