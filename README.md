@@ -277,3 +277,6 @@ NsdServer APP 跑 backgroung service，隨手機開機啟動
 NsdClient APP 查詢服務，port,address,service name,service type
 
 皆在同一支手機上 run ( 這兩支 APP)
+
+## 2015/12/17
+報告專題討論所需要用到的文章。
