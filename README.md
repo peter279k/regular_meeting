@@ -280,3 +280,14 @@ NsdClient APP 查詢服務，port,address,service name,service type
 
 ## 2015/12/17
 報告專題討論所需要用到的文章。
+
+## 2015/12/31
+提出 button 點擊方式
+
+註冊 broadcast 發送點擊訊息
+
+使用模擬點擊，進入APP後執行模擬點擊動作
+
+安裝 KSWEB server 做測試，綁定同一個port 8080
+
+讀 High Performance Mobile Web (第 23 頁 第一章快結束)
